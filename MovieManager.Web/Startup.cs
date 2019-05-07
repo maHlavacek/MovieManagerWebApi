@@ -26,23 +26,6 @@ namespace MovieManager.Web
             services.AddScoped<IUnitOfWork, UnitOfWork>(
                 serviceProvider => new UnitOfWork());
 
-            //services.AddSwaggerGen(configuration =>
-            //    {
-            //        configuration.SwaggerDoc(
-            //            "v1", new Info()
-            //            {
-            //                Title = "Movie Manager API",
-            //                Version = "v1",
-            //                Contact = new Contact()
-            //                {
-            //                    Name = "Josef Fürlinger",
-            //                    Email = "j.fuerlinger@htl-leonding.ac.at",
-            //                    Url = "https://github.com/jfuerlinger"
-            //                }
-            //            });
-            //    }
-            //);
-
             services.AddSwaggerGen(configuration =>
                 configuration.SwaggerDoc(
                     "v1", new Info()
@@ -51,9 +34,9 @@ namespace MovieManager.Web
                         Version = "v1",
                         Contact = new Contact()
                         {
-                            Name = "Josef Fürlinger",
-                            Email = "j.fuerlinger@htl-leonding.ac.at",
-                            Url = "https://github.com/jfuerlinger"
+                            Name = "maHlavacek",
+                            Email = "mahl.....",
+                            Url = "https://github.com/maHlavacek"
                         }
                     }));
         }
@@ -74,13 +57,6 @@ namespace MovieManager.Web
             app.UseHttpsRedirection();
 
             app.UseMvc();
-
-            //app.UseSwagger();
-            //app.UseSwaggerUI(configuration =>
-            //{
-            //    configuration.SwaggerEndpoint("/swagger/v1/swagger.json", "Movie Manager API V1");
-            //    //configuration.RoutePrefix = string.Empty;
-            //});
 
             app.UseSwagger();
             app.UseSwaggerUI(configuration =>
